@@ -1,0 +1,157 @@
+input {
+    margin: 0;
+    padding: 0;
+    
+    border: 0;
+
+    box-sizing: border-box;
+
+    -webkit-appearance: none;
+}
+
+#frm_msg {
+    position: fixed;
+
+    margin: 0;
+    padding: 0 10px;
+    
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    z-index: 10;
+}
+#frm_msg input {
+    font-size: 15px;
+    text-indent: 10px;
+
+    line-height: 26px;
+}
+
+#frm_msg_name { width: 200px; }
+#frm_msg_msg { width: calc(100% - 230px); }
+#frm_msg_submit {
+    margin-left: -30px;
+    font-size: small;
+}
+
+article {
+    position: absolute;
+
+    font-family: 'Nanum Gothic', sans-serif;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+
+    display: none;
+}
+article.black {
+    background-color: #000000 !important;
+}
+
+article h1 {
+    font-size: 2.5em;
+}
+article h2 {
+    font-size: 2em;
+}
+article h3 {
+    font-size: 1.7em;
+}
+article a {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+}
+article a::before {
+    display: inline;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f0c1";
+    font-size: 0.7em;
+    line-height: 1em;
+    margin-right: 5px;
+}
+article a:hover {
+    opacity: 0.7;
+}
+
+article .center {
+    position: absolute;
+
+    text-align: center;
+    
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+}
+article .center pre {
+    text-align: left;
+    font-size: 2em;
+}
+
+#article000 {
+    color: #FFFFFF;
+}
+
+.chapter1 {
+    background-color: #F7DF1E;
+    background-image: url('/images/001-001.png');
+    background-position: right bottom;
+}
+
+.chapter2 {
+    background-color: #46483e;
+    background-image: url('/images/002-001.png');
+    background-position: left top;
+
+    color: #FFFFFF;
+}
+
+.chapter4 {
+    background-color: #333333;
+
+    color: #FFFFFF;
+}
+
+#article022 .center,
+#article023 .center { width: 600px; }
+
+.chapter5 {
+    background-color: #CB3837;
+    background-image: url('/images/005-001.png');
+    background-position: right bottom;
+
+    color: #FFFFFF;
+}
+
+#article028 { background-image: none; }
+
+.chapter6 {
+    background-color: #FFFFFF;
+
+    color: #333333;
+}
+
+#article036 h1 {
+    float: left;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
+#article036 img {
+    max-width: 300px;
+    float: right;
+    vertical-align: middle;
+}

@@ -1,0 +1,74 @@
+#wrap {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+}
+
+#frm_login {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+#frm_login input {
+    -webkit-appearance: none;
+    
+    border: 0;
+    
+    width: 4em;
+    
+    font-size: 30px;
+    text-align: center;
+    
+    background-color: #CCC;
+}
+
+#frm_controller_prev,
+#frm_controller_next {
+    -webkit-appearance: none;
+    position: fixed;
+    left: 0;
+    border: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 10;
+}
+#frm_controller_prev {
+    bottom: 0;
+    height: 50px;
+}
+#frm_controller_next {
+    top: 0;
+    height: calc(100% - 50px);
+    opacity: 0;
+}
+
+#chatlog {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    margin: 0;
+    padding: 10px;
+    
+    width: 100%;
+    height: 100%;
+
+    font-family: 'Nanum Gothic', sans-serif;
+    
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#chatlog li {
+    margin-bottom: 10px;
+}
+
+#chatlog p { margin: 0; padding: 0; }
+#chatlog .date,
+#chatlog .ip { font-size: 0.7em; }

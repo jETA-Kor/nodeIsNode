@@ -1,0 +1,313 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Node를 Araboja</title>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/audience.css" />
+</head>
+
+<body>
+    <div id="frm_msg">
+        <input type="text" id="frm_msg_name" placeholder="이름" />
+        <input type="text" id="frm_msg_msg" placeholder="질문을 입력하세요." />
+        <i id="frm_msg_submit" class="fas fa-check-circle"></i>
+    </div>
+    <article id="front" class="black"></article>
+    <article id="article000" class="black">
+        <div class="center">
+            <h1>김준철</h1>
+            <h3>http://jetalog.net</h3>
+        </div>
+    </article>
+    <article id="article001" class="chapter1"></article>
+    <article id="article002" class="chapter1">
+        <div class="center">
+            <h1>Java == JavaScript?</h1>
+        </div>
+    </article>
+    <article id="article003" class="chapter1">
+        <div class="center">
+            <h1>멀티 패러다임</h1>
+            <h3>원하는 방식으로</h3>
+        </div>
+    </article>
+    <article id="article004" class="chapter1">
+        <div class="center">
+            <h1>인터프리터 언어</h1>
+            <h3>Step by step</h3>
+        </div>
+    </article>
+    <article id="article005" class="chapter1">
+        <div class="center">
+            <h1>동적 바인딩</h1>
+            <h3>내가 있는 곳이 나를 정의한다.</h3>
+        </div>
+    </article>
+    <article id="article006" class="chapter1">
+        <div class="center">
+            <h1>동적 바인딩</h1>
+            <h3>0 == '0'</h3>
+        </div>
+    </article>
+    <article id="article007" class="chapter1">
+        <div class="center">
+            <h1>동적 바인딩</h1>
+            <h3>0 == []</h3>
+        </div>
+    </article>
+    <article id="article008" class="chapter1">
+        <div class="center">
+            <h1>동적 바인딩</h1>
+            <h3>'0' == []</h3>
+        </div>
+    </article>
+    <article id="article009" class="chapter1">
+        <div class="center">
+            <h1>동적 바인딩</h1>
+            <h3>0 === '0'</h3>
+        </div>
+    </article>
+    <article id="article010" class="chapter2"></article>
+    <article id="article011" class="chapter2">
+        <div class="center">
+            <h1>Chrome V8 Javascript Engine</h1>
+        </div>
+    </article>
+    <article id="article012" class="chapter2">
+        <div class="center">
+            <h1>비동기 방식</h1>
+        </div>
+    </article>
+    <article id="article013" class="chapter2">
+        <div class="center">
+            <h1>Single Thread</h1>
+        </div>
+    </article>
+    <article id="article014" class="chapter2">
+        <div class="center">
+            <h1>풍부한 패키지</h1>
+        </div>
+    </article>
+    <article id="article015" class="chapter2">
+        <div class="center">
+            <h1>높은 생산성</h1>
+        </div>
+    </article>
+    <article id="article016" class="chapter2">
+        <div class="center">
+            <h1>설치</h1>
+            <h3 id="install_primary"></h3>
+            <h3 id="install_secondary">
+                <a id="install_windows" href="/installers/node-v10.14.2-x86.msi">Windows</a>
+                <a id="install_mac" href="/installers/node-v10.14.2.pkg">MacOS</a>
+                <a id="install_linux" href="https://github.com/nodesource/distributions/blob/master/README.md" target="_blank">Linux</a>
+            </h3>
+        </div>
+    </article>
+    <article id="article017" class="chapter3 black"></article>
+    <article id="article018" class="chapter3">
+        <div class="center">
+            <pre>
+main() {
+    puts("Hello, world!");
+    return 0;
+}
+            </pre>
+        </div>
+    </article>
+    <article id="article019" class="chapter3">
+        <div class="center">
+            <pre>
+const main = () => {
+    console.log('Hello, world!');
+};
+main();
+            </pre>
+        </div>
+    </article>
+    <article id="article020" class="chapter3">
+        <div class="center">
+            <pre>
+console.log('Hello, world!');
+            </pre>
+        </div>
+    </article>
+    <article id="article022" class="chapter4">
+        <div class="center">
+            <h1>非同步</h1>
+        </div>
+    </article>
+    <article id="article022" class="chapter4">
+        <div class="center">
+            <pre>
+const echo = (time) => {
+    setTimeout(() => {
+        console.log(time);
+    }, time);
+};
+
+echo(3000);
+echo(1000);
+echo(2000);
+            </pre>
+            <p>총 실행 시간은?</p>
+        </div>
+    </article>
+    <article id="article023" class="chapter4">
+        <div class="center">
+            <pre>
+const echo = (time) => {
+    setTimeout(() => {
+        console.log(time);
+    }, time);
+};
+
+echo(3000);
+echo(1000);
+echo(2000);
+            </pre>
+            <p>왜 1000, 2000, 3000 순서로 출력될까?</p>
+        </div>
+    </article>
+    <article id="article024" class="chapter4">
+        <div class="center">
+            <h1>1. Callback</h1>
+            <pre>
+const echo = (time, callback) => {
+    setTimeout(() => {
+        console.log(time);
+        callback();
+    }, time);
+};
+
+const main = () => {
+    echo(3000, () => {
+        echo(1000, () => {
+            echo(2000, () => {
+                return;
+            });
+        });
+    });
+};
+main();
+            </pre>
+        </div>
+    </article>
+    <article id="article025" class="chapter4">
+        <div class="center">
+            <h1>Callback Hell</h1>
+            <img src="/images/004-001.jpg" />
+        </div>
+    </article>
+    <article id="article026" class="chapter4">
+        <div class="center">
+            <h1>2. Promise</h1>
+            <pre>
+const echo = (time) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log(time);
+            resolve();
+        }, time);
+    });
+};
+
+const main = () => {
+    echo(3000)
+        .then(echo.bind(null, 1000))
+        .then(echo.bind(null, 2000));
+};
+main();
+            </pre>
+        </div>
+    </article>
+    <article id="article027" class="chapter4">
+        <div class="center">
+            <h1>3. async / await</h1>
+            <pre>
+const echo = (time) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log(time);
+            resolve();
+        }, time);
+    });
+};
+
+const main = async () => {
+    await echo(3000);
+    await echo(1000);
+    await echo(2000);
+};
+main();
+            </pre>
+        </div>
+    </article>
+    <article id="article028" class="chapter5"></article>
+    <article id="article029" class="chapter5"></article>
+    <article id="article030" class="chapter5">
+        <div class="center">
+            <h1>Node Package Manager</h1>
+        </div>
+    </article>
+    <article id="article031" class="chapter5">
+        <div class="center">
+            <h1>865,000</h1>
+            <h3>등록된 패키지</h3>
+        </div>
+    </article>
+    <article id="article032" class="chapter5">
+        <div class="center">
+            <h1>37,000,000,000</h1>
+            <h3>1개월 다운로드수</h3>
+        </div>
+    </article>
+    <article id="article033" class="chapter5">
+        <div class="center">
+            <h1>request.js</h1>
+            <h3>뉴스를 크롤링해보자.</h3>
+        </div>
+    </article>
+    <article id="article034" class="chapter6">
+        <div class="center">
+            <h1>express.js</h1>
+            <h3>API 서버를 만들어보자.</h3>
+        </div>
+    </article>
+    <article id="article035" class="chapter6">
+        <div class="center">
+            <h1>I am a boy. You are a girl.</h1>
+            <pre>
+GET /whoami
+- 서버가 받은 이름을 돌려준다.
+- query
+    - name: 불리길 원하는 이름
+
+GET /whoareu
+- 서버의 이름을 돌려준다.
+
+POST /youare
+- 서버의 이름을 설정한다.
+- body
+    - name: 서버의 새 이름
+            </pre>
+        </div>
+    </article>
+    <article id="article036" class="chapter7">
+        <div class="center">
+            <h1>대신귀<br />여운코<br />오드를<br />드리겠<br />습니다</h1>
+            <a href=""><img src="/images/007-001.png" /></a>
+        </div>
+    </article>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/socket.io.js"></script>
+    <script src="/js/audience.js"></script>
+</body>
+
+</html>
