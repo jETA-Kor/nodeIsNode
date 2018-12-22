@@ -1,37 +1,14 @@
 var socket = io('/');
-socket.emit('auth');
+socket.emit('auth'); // 발표자로 인증 요청
 
-var $frm_login_key = $('#frm_login_key');
 var $frm_controller_prev = $('#frm_controller_prev');
 var $frm_controller_next = $('#frm_controller_next');
 var $chatlog = $('#chatlog');
 
-$frm_login_key.keyup(function () {
-    var key = this.value;
-    if (key.length === 4) {
-        $.ajax({
-            type: 'POST',
-            url: '/presenter',
-            xhrFields: {
-                withCredentials: true,
-            },
-            data: {
-                key: key,
-            },
-        }).done(function () {
-            location.reload();
-        }).fail(function (xhr, err) {
-            console.error(err);
-            $frm_login_key.val('');
-            window.alert('코드를 다시 확인하세요.');
-        });
-    }
-});
+$frm_controller_prev.click(function () { socket.emit('prevslide') }); // 이전 슬라이드 버튼을 클릭하면 이전 슬라이드 요청
+$frm_controller_next.click(function () { socket.emit('nextslide') }); // 다음 슬라이드 버튼을 클릭하면 다음 슬라이드 요청
 
-$frm_controller_prev.click(function () { socket.emit('prevslide') });
-$frm_controller_next.click(function () { socket.emit('nextslide') });
-
-var addChatNode = function (chat) {
+var addChatNode = function (chat) { // 메시지를 목록에 추가
     var html = '';
     html += '<li>';
     html += '   <p>';
@@ -44,15 +21,15 @@ var addChatNode = function (chat) {
 
     $chatlog.prepend(html);
 };
-socket.on('chatlist', function (list) {
+socket.on('chatlist', function (list) { // 메시지 목록이 수신되면
     var i = 0;
-    for (i = 0; i < list.length; i++) {
+    for (i = 0; i < list.length; i++) { // 순서대로 목록을 생성
         addChatNode(list[i]);
     }
 });
-socket.on('chat', function (chat) {
-    addChatNode(chat);
+socket.on('chat', function (chat) { // 새 메시지가 수신되면
+    addChatNode(chat); // 목록 생성
 }); 
-socket.on('disconnect', function () {
-    location.reload();
+socket.on('disconnect', function () { // 소켓 연결이 끊긴 경우
+    location.reload(); // 페이지를 새로고침
 });
